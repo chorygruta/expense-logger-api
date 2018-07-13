@@ -1,6 +1,6 @@
 {
     "env": {
-        "MONGO_ATLAS_PW": "expeditionco-admin",
+        "MONGO_ATLAS_PW": "node-api",
         "JWT_KEY": "expeditionco"
     }
 }
