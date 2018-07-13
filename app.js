@@ -7,7 +7,7 @@ const mongoose = require('mongoose');
 // Routes from '.api/routes
 const routes = require('./api/routes/index');
 
-const global_db = mongoose.connect('mongodb://localhost:27017/xpense-logger-masterDb', { useNewUrlParser: true });
+const global_db = mongoose.connect('mongodb://localhost:27017/xpense-logger-db', { useNewUrlParser: true });
 
 // Logs every incoming requests on the console
 app.use(morgan('dev'));

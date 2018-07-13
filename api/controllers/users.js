@@ -107,7 +107,7 @@ exports.login_user = (req, res, next) => {
                 console.log(user);
                 return res.status(401).json({
                     success: false,
-                    error: 'Auth failed length'
+                    error: 'Auth failed'
                 });
             }
             bcrypt.compare(req.body.password, user.password, (err, result) => {
@@ -147,7 +147,11 @@ exports.login_user = (req, res, next) => {
                         success: true,
                         data: {
                             token: token,
-                            user: user
+                            user: {
+                                id: user._id,
+                                email: user.email,
+                                loginHistory: user.loginHistory
+                            }
                         },
                         message: 'Auth succesful',
                     });
